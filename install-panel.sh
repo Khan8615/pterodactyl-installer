@@ -91,8 +91,9 @@ email_regex="^(([A-Za-z0-9]+((\.|\-|\_|\+)?[A-Za-z0-9]?)*[A-Za-z0-9]+)|[A-Za-z0-
 ####### Version checking ########
 
 # define version using information from GitHub
+#"https://api.github.com/repos/$1/releases/latest"
 get_latest_release() {
-  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+  curl --silent "https://api.github.com/repos/$1/releases/v1.8.1" | # Get latest release from GitHub api
     grep '"tag_name":' |                                            # Get tag line
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
