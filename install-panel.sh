@@ -100,8 +100,8 @@ get_latest_release() {
 
 # pterodactyl version
 echo "* Retrieving release information.."
-PTERODACTYL_VERSION="$(get_latest_release "pterodactyl/panel")"
-
+PTERODACTYL_VERSION="$(v1.8.1 "pterodactyl/panel")"
+#"$(get_latest_release "pterodactyl/panel")"
 ####### lib func #######
 
 array_contains_element() {
