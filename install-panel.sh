@@ -100,8 +100,7 @@ get_latest_release() {
 
 # pterodactyl version
 echo "* Retrieving release information.."
-echo get_latest_release()
-PTERODACTYL_VERSION="$(v1.8.1 "pterodactyl/panel")"
+PTERODACTYL_VERSION="$(get_latest_release "pterodactyl/panel")"
 #"$(get_latest_release "pterodactyl/panel")"
 ####### lib func #######
 
