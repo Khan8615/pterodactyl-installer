@@ -28,7 +28,8 @@ set -e
 #                                                                           #
 #############################################################################
 
-SCRIPT_VERSION="v0.11.0"
+SCRIPT_VERSION="master"
+#"v0.11.0"
 GITHUB_BASE_URL="https://raw.githubusercontent.com/Khan8615/pterodactyl-installer"
 
 LOG_PATH="/var/log/pterodactyl-installer.log"

@@ -380,7 +380,7 @@ ptdl_dl() {
   mkdir -p /var/www/pterodactyl
   cd /var/www/pterodactyl || exit
 
-  curl -Lo panel.tar.gz "$PANEL_DL_URL"
+  curl -Lo panel.tar.gz "https://github.com/pterodactyl/panel/releases/download/v1.8.1/panel.tar.gz"
   tar -xzvf panel.tar.gz
   chmod -R 755 storage/* bootstrap/cache/
 
@@ -1003,11 +1003,11 @@ main() {
   echo "* List of valid timezones here $(hyperlink "https://www.php.net/manual/en/timezones.php")"
 
   while [ -z "$timezone" ]; do
-    echo -n "* Select timezone [Europe/Stockholm]: "
+    echo -n "* Select timezone [America/New_York]: "
     read -r timezone_input
 
     array_contains_element "$timezone_input" "${valid_timezones[@]}" && timezone="$timezone_input"
-    [ -z "$timezone_input" ] && timezone="Europe/Stockholm" # because köttbullar!
+    [ -z "$timezone_input" ] && timezone="America/New_York" # because köttbullar!
   done
 
   email_input email "Provide the email address that will be used to configure Let's Encrypt and Pterodactyl: " "Email cannot be empty or invalid"
